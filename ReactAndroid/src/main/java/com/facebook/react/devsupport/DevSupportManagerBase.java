@@ -1181,8 +1181,7 @@ public abstract class DevSupportManagerBase
       if (!mIsReceiverRegistered) {
         IntentFilter filter = new IntentFilter();
         filter.addAction(getReloadAppAction(mApplicationContext));
-        mApplicationContext.registerReceiver(mReloadAppBroadcastReceiver, filter);
-		compatRegisterReceiver(mApplicationContext, mReloadAppBroadcastReceiver, filter, true);
+        compatRegisterReceiver(mApplicationContext, mReloadAppBroadcastReceiver, filter, true);
         mIsReceiverRegistered = true;
       }
 
